@@ -6,8 +6,12 @@
 
 <body>
 <h1 th:text="${Titulo}"> </h1>
-<h1></h1>
-<span th:text="${usuario1}"></span>
+<b>
+    <span th:text="${usuario.getNombre()}"></span>
+    <span th:text="${usuario.apellido}"></span>
+    <span th:if="${usuario.email}" th:text="${usuario.email}"> </span>
+</b>
+<span th:if="${usuario.email== null}" th:text="'usuario sin correo'"> </span>
 </body>
 </head>
 </html>
